@@ -5,9 +5,9 @@ class indexController {
   }
 
   $onInit() {
-      this.indexService.getSearch('elvis').then((res) => {
-          console.log(res);
-      });
+    this.albumns = [];  
+    this.indexService.getSearch('elvis')
+    .then(res => this.albumns = res.data.albums.items)
   }
 }
 
