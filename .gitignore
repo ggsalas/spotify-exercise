@@ -44,3 +44,6 @@ bower_components
 # Compiled Files
 dist/app.js
 dist/style.css
+
+# macos
+.DS_Store
