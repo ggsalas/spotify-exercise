@@ -6,8 +6,11 @@ class indexController {
 
   $onInit() {
     this.albumns = [];  
-    this.indexService.getSearch('elvis')
-    .then(res => this.albumns = res.data.albums.items)
+  }
+
+  getData($event) {
+    this.indexService.getSearch($event.query)
+    .then(res => this.albumns = res.data.albums.items);
   }
 }
 
