@@ -10,7 +10,7 @@ const module = angular
     .config(($stateProvider) => {
         $stateProvider.state('albumDetails', {
             url: '/details/:albumId',
-            template: '<album-details></album-details>>'
+            template: '<album-details></album-details>'
         });
     })
     .name;
