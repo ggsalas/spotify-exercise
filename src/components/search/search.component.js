@@ -5,7 +5,8 @@ const searchComponent = {
   template,
   controller,
   bindings: {
-    onSearch: '&'
+    onSearch: '&',
+    value: '<'
   }
 
 }

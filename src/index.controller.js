@@ -7,11 +7,12 @@ class indexController {
 
   $onInit() {
     this.albumns = [];  
-    this.getData();
+    //this.getData();
   }
 
-  getData() {
-    this.indexService.getSearch(this.searchTxt)
+  getData($event) {
+    console.log('event', $event);
+    this.indexService.getSearch($event.query)
     .then(res => this.albumns = res.data.albums.items);
   }
 }
