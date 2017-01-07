@@ -9,7 +9,7 @@ const module = angular
     .component('albumDetails', component)
     .config(($stateProvider) => {
         $stateProvider.state('albumDetails', {
-            url: '/details/:albumId',
+            url: '/album/:albumId',
             template: '<album-details></album-details>'
         });
     })

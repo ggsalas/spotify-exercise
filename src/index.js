@@ -8,7 +8,15 @@ angular
   .module('spotifyzier', [uiRouter, ComponentsModule])
   .component('indexComponent', indexComponent)
   .service('indexService', service)
-  .config(($urlRouterProvider) => {
+  .config(
+    ($stateProvider) => {
+      $stateProvider.state('search', {
+        url: '/:searchTxt',
+        template: '<index-component></index-component>', 
+        }
+      );
+    },
+    ($urlRouterProvider) => {
     'ngInject';
     $urlRouterProvider.otherwise('/');
   });

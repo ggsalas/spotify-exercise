@@ -14,8 +14,8 @@
   </head>
 
   <body ng-app="spotifyzier">
+    <search-component on-search="$ctrl.getData($event)"></search-component>
     <section ui-view></section>
-    <index-component></index-component>
     <script src="app.js"></script>
   </body>
 </html>

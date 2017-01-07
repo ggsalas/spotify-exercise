@@ -1,5 +1,4 @@
 <div class="index-container">
-  <search-component on-search="$ctrl.getData($event)"></search-component>
   <div class="results">
       <div class="album" ng-repeat="album in $ctrl.albumns">
         <div class="album-background" style="background-image: url({{album.images[0].url}})"></div>

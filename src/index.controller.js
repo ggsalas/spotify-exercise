@@ -1,15 +1,17 @@
 class indexController {
-  constructor(indexService) {
+  constructor(indexService, $stateParams) {
     'ngInject';
     this.indexService = indexService;
+    this.searchTxt = $stateParams.searchTxt;
   }
 
   $onInit() {
     this.albumns = [];  
+    this.getData();
   }
 
-  getData($event) {
-    this.indexService.getSearch($event.query)
+  getData() {
+    this.indexService.getSearch(this.searchTxt)
     .then(res => this.albumns = res.data.albums.items);
   }
 }
