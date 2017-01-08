@@ -1,4 +1,5 @@
-    <search-component on-search="$ctrl.getData($event)" value="$ctrl.searchTxt"></search-component>
+<search-component on-search="$ctrl.getData($event)" value="$ctrl.searchTxt"></search-component>
+
 <div class="index-container">
   <div class="results">
       <div class="album" ng-repeat="album in $ctrl.albumns">
@@ -12,7 +13,7 @@
           <a class="album-link" href="{{album.external_urls.spotify}}" title=""><span class="album-link-button"><i class="fa fa-volume-up" aria-hidden="true"></i></span>Listen on Spotify</a>
         </div>
         <span class="album-button">
-          <button class="button button-green">View Comments</button>
+          <button class="button button-green" ng-click="$ctrl.goToAlbum(album.id)">View Comments</button>
         </span>
       </div>
   </div>

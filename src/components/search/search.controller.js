@@ -1,11 +1,7 @@
 class SearchController {
-  constructor($state) {
-    'ngInject';
-    this.state = $state;
-  }
-
   $onChanges(changes) {
-    if(changes.value) {
+    // to get search from url bar
+    if(changes.value && changes.value.currentValue !== '') {
       this.query = changes.value.currentValue; 
       this.search();
     }
@@ -13,12 +9,9 @@ class SearchController {
 
   search() {
     this.onSearch({
-      $event: {
-        query: this.query
-      }
+      $event: { query: this.query }
     });
-   // this.state.go('search', {searchTxt: this.query});
   }
-};
+}
 
 export default SearchController;

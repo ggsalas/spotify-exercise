@@ -8,7 +8,6 @@ const searchComponent = {
     onSearch: '&',
     value: '<'
   }
-
-}
+};
 
 export default searchComponent;

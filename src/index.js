@@ -13,10 +13,10 @@ angular
       $stateProvider.state('search', {
         url: '/:searchTxt',
         template: '<index-component></index-component>', 
-        }
-      );
+      });
     },
     ($urlRouterProvider) => {
-    'ngInject';
-    $urlRouterProvider.otherwise('/');
-  });
+      'ngInject';
+      $urlRouterProvider.otherwise('/');
+    }
+  );
