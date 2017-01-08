@@ -3,7 +3,7 @@ import controller from './index.controller';
 
 const indexComponent = {
   template,
-  controller
+  controller,
 };
 
 export default indexComponent;

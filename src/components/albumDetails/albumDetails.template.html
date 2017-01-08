@@ -1,7 +1,20 @@
-<br />
-<br />
-<br />
-<br />
-Album
 <search-component on-search="$ctrl.goToSearch($event)" ></search-component>
+<div class="album-container">
+  <div class="album">
+    <div class="album-background" style="background-image: url({{$ctrl.album.images[0].url}})"></div>
+    <img class="album-image" src={{$ctrl.album.images[0].url}} />
+    <div class="album-text">
+      <span class="album-artists">
+        <span ng-repeat="artist in album.artists">{{artist.name}}</span>
+      </span>
+      <h2 class="album-title">{{$ctrl.album.name}}</h2>
+      <a class="album-link" href="{{$ctrl.album.external_urls.spotify}}" title=""><span class="album-link-button"><i class="fa fa-volume-up" aria-hidden="true"></i></span>Listen on Spotify</a>
+    </div>
+    <span class="album-button">
+      <button class="button button-green album-back-to-search" ng-click="$ctrl.goBackToSearch()">
+      <i class="fa fa-angle-left " aria-hidden="true"></i>
+      Back to Search</button>
+    </span>
+  </div>
+</div>
 

@@ -217,7 +217,7 @@ a:active{
 
 // Album & comments
 .album-container{
-  margin: $margin;
+  margin: $search-height + $margin * 3 auto; 
 }
 .comments-header {
   display: flex;
