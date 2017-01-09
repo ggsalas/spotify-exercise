@@ -19,7 +19,8 @@ class AlbumDetailsController {
   }
 
   goBackToSearch() {
-    //TODO
+    //TODO get previus state if exist
+    this.state.go('search');
   }
 }
 

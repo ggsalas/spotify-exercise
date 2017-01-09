@@ -3,7 +3,7 @@ import template from './albumDetails.template.html';
 
 const component = {
   controller,
-  template
+  template,
 };
 
 export default component;
