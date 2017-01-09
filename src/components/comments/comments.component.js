@@ -5,7 +5,8 @@ const commentsComponent = {
   controller,
   template,
   bindings: {
-    albumId: '<'
+    albumId: '<',
+    idAlbum: '&',
   }
 };
 

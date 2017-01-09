@@ -9,7 +9,7 @@ class commentsService {
   }
 
   addComment(formData) {
-    return this.$http.post('/comments', {formData});
+    return this.$http.post('/comments', formData);
   }
 }
 
