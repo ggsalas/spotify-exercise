@@ -10,7 +10,7 @@
 
   <ul class="comment-list">
     <li class="comment" ng-repeat="comment in $ctrl.comments">
-     <img class="comment-avatar" width={80} height={80} ng-src="comment.avatar" />
+      <img class="comment-avatar" width={80} height={80} ng-src="{{comment.avatar}}" />
      <div class="comment-content">
        <span class="comment-email">{{comment.email}}</span>
        <span class="comment-text">{{comment.text}}</span>

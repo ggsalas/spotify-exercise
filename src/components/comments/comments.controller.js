@@ -1,7 +1,7 @@
 class commentsController {
   constructor(commentsService) {
     this.commentsService = commentsService;
-    this.comments;
+    this.comments = [];
     this.albumId;
   }
 
@@ -11,8 +11,9 @@ class commentsController {
     if(changes.albumId.isFirstChange()) {
       return;
     }
+
     this.commentsService.getComments(this.albumId)
-    .then(res => this.comments = res);    
+    .then(res => this.comments = res.data);    
   }
 
   submitForm($event) {
