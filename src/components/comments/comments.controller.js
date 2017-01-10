@@ -27,11 +27,12 @@ class commentsController {
     .then( () => {
       this.commentList();
       this.commentWrite = false;
+      document.querySelector('.comment-form').reset();
     });
   }
 
   loadMore() {
-    this.limit < this.comments.length ? this.limit += 3 : this.limit = this.comments.length;
+    this.limit < this.comments.length ? this.limit += 5 : this.limit = this.comments.length;
   }
 }
 

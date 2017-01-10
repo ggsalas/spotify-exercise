@@ -1,7 +1,7 @@
 class commentFormController {
   constructor() {
     this.data = {
-      albumId: 'albumid',
+      albumId: '',
       email: '',
       text: '',
       id: 'comment-' + Date.now(), 

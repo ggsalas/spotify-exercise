@@ -218,6 +218,8 @@ a:active{
 // Album & comments
 .album-container{
   margin: $search-height + $margin * 3 auto; 
+  padding: 0 $margin;
+  max-width: $max-width;
 }
 .comments-header {
   display: flex;
