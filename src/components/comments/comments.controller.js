@@ -1,8 +1,10 @@
 class commentsController {
   constructor(commentsService) {
     this.commentsService = commentsService;
-    this.comments = [];
+    this.comments;
     this.albumId;
+    this.limit = 2;
+    this.commentWrite = false;
   }
 
   $onChanges(changes) {
@@ -12,16 +14,24 @@ class commentsController {
       return;
     }
 
+    this.commentList();
+  }
+
+  commentList() {
     this.commentsService.getComments(this.albumId)
     .then(res => this.comments = res.data);    
   }
 
   submitForm($event) {
-    console.log('formDataEvent on comments: ', $event)
     this.commentsService.addComment($event)
-    .then(
-      this.commentsService.getComments(this.albumId)
-    )
+    .then( () => {
+      this.commentList();
+      this.commentWrite = false;
+    });
+  }
+
+  loadMore() {
+    this.limit < this.comments.length ? this.limit += 3 : this.limit = this.comments.length;
   }
 }
 

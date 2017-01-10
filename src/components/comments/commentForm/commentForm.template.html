@@ -1,11 +1,11 @@
-<form class="comment-form" ng-submit="$ctrl.formSubmit()">
+<form class="comment-form"  ng-submit="$ctrl.formSubmit()" novalidate>
   <img class="comment-form-avatar" src="https://placehold.it/56/404040" />
   <div class="comment-form-content">
     <input type="text" name="email" placeholder="e-mail" class="comment-form-email" 
-      ng-model="$ctrl.data.email"    
+      ng-model="$ctrl.data.email" 
       required/>
     <textarea name="text" class="comment-form-text" placeholder="Write your comment" 
-      ng-model="$ctrl.data.text"                                 
+      ng-model="$ctrl.data.text"
       required></textarea>
     <span class="comment-form-submit"><button class="button button-green" type="submit">Add</button></span>
   </div>
