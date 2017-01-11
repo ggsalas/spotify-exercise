@@ -7,13 +7,26 @@ class indexController {
     this.state = $state;
   }
 
-  getData($event) {
-    this.indexService.getSearch($event.query)
+  $onInit() {
+    this.getData(this.searchTxt);
+  }
+
+  getData(query) {
+    this.indexService.getSearch(query)
     .then(res => this.albumns = res.data.albums.items);
   }
 
+  goToSearch($event) {
+    if($event.query) {
+      this.state.go('search', {searchTxt: $event.query});
+    }
+  }
+
   goToAlbum(albumId) {
-    this.state.go('albumDetails', {albumId});
+    this.state.go('albumDetails', {
+      albumId,
+      searchTxt: this.searchTxt
+    });
   }
 }
 

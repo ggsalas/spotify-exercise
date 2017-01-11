@@ -13,6 +13,7 @@ angular
       $stateProvider.state('search', {
         url: '/:searchTxt',
         template: '<index-component></index-component>', 
+        reloadOnSearch: true
       });
     },
     ($urlRouterProvider) => {

@@ -4,6 +4,7 @@ class AlbumDetailsController {
     this.albumDetailsService = albumDetailsService;
     this.state = $state;
     this.albumId = $stateParams.albumId;
+    this.searchTxt = $stateParams.searchTxt;
     this.album = '';
   }
 
@@ -18,9 +19,12 @@ class AlbumDetailsController {
     }
   }
 
-  goBackToSearch() {
-    //TODO get previus state if exist
-    this.state.go('search');
+  goBackToSearch(searchTxt) {
+    if(searchTxt) {
+      this.state.go('search', {searchTxt});
+    }else{
+      this.state.go('search');
+    } 
   }
 }
 
