@@ -1,3 +1,4 @@
+/*
 import angular from 'angular';
 import chai from 'chai';
 import sinon from 'sinon';
@@ -16,3 +17,4 @@ describe('App Default Route Test', function() {
     chai.expect($location.path()).to.equal('/');
   }));
 });
+*/
